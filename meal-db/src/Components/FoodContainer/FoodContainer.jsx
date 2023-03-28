@@ -6,6 +6,14 @@ import "./FoodContainer.css"
 const FoodContainer = () => {
 
     const [foods , setFoods] = useState([])
+    const [selectedItems , setSelectedItems] = useState([])
+
+    const displayOnCart =(product)=>{
+
+        const newItems = [...selectedItems , product]
+        setSelectedItems(newItems);
+
+    }
 
     useEffect(()=>{
         const loadFood=()=>{
@@ -29,7 +37,7 @@ const FoodContainer = () => {
                         
                             food = {food} 
                             key = {food.idMeal}
-
+                            displayOnCart={displayOnCart}
                         >
 
                         </SingleFood>)
@@ -39,7 +47,7 @@ const FoodContainer = () => {
 
                 <div className="box2">
 
-                    <Cart></Cart>
+                    <Cart selectedItems={selectedItems}></Cart>
 
                 </div>
 

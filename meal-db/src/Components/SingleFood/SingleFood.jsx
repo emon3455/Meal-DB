@@ -2,9 +2,8 @@ import React from 'react';
 import "./SingleFood.css"
 
 const SingleFood = (props) => {
-
-    console.log(props.food);
-    const {strCategory, strInstructions, strMeal, strMealThumb, strSource} = props.food
+    const {strCategory, strInstructions, strMeal, strMealThumb, strSource,} = props.food
+    const displayOnCart = props.displayOnCart;
 
     return (
         <div className='card'>
@@ -16,11 +15,11 @@ const SingleFood = (props) => {
                 <h3>Name: {strMeal}</h3>
                 <h3>Catagory: {strCategory}</h3>
                 <p>
-                    Description: {strInstructions.length > 120 ? strInstructions.slice(0,120)+" ..." : strInstructions}
+                    <strong>Description:</strong> {strInstructions.length > 120 ? strInstructions.slice(0,120)+" ..." : strInstructions}
                 </p>
                 <p><strong>Source:</strong><br /> {strSource ? strSource: "None"}</p>
                 <br />
-                <span>
+                <span onClick={()=> displayOnCart(props.food)}>
                     <button>Add To Cart</button>
                 </span>
             </div>
