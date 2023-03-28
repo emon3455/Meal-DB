@@ -1,0 +1,25 @@
+.card{
+    background-color: aliceblue;
+    padding: 0.2rem;
+    border-radius: 10px;
+    position: relative;
+}
+.banner{
+    text-align: center;
+}
+.banner img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+span button{
+    background-color: #618ddf;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

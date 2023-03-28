@@ -4,8 +4,16 @@
 }
 
 .box1{
-    background-color: antiquewhite;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
 }
 .box2{
-    background-color: aqua;
+    background-color: antiquewhite;
+}
+
+.cart{
+    position: sticky;
+    top: 0;
 }

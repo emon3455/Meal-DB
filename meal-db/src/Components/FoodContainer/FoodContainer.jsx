@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SingleFood from '../SingleFood/SingleFood';
 import "./FoodContainer.css"
 
 const FoodContainer = () => {
@@ -15,27 +16,37 @@ const FoodContainer = () => {
         loadFood();
     },[])
 
-console.log(foods);
     return (
-        <>
+        <div>
 
             <div className="container">
 
                 <div className="box1">
 
                     {
-                        foods.map(food => <h2>food</h2>)
+                        foods.map(food => <SingleFood
+                        
+                            food = {food} 
+                            key = {food.idMeal}
+
+                        >
+
+                        </SingleFood>)
                     }
 
                 </div>
 
                 <div className="box2">
 
+                    <div className="cart">
+                        <h2>Orderd Items:</h2>
+                    </div> 
+                    
                 </div>
 
             </div>
             
-        </>
+        </div>
     );
 };
 
