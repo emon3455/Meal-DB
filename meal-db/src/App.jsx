@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import FoodContainer from './Components/FoodContainer/FoodContainer'
 import Header from './Components/Header/Header'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <FoodContainer></FoodContainer>
     </div>
   )
 }
