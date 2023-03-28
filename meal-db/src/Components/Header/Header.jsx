@@ -9,7 +9,7 @@ const Header = () => {
 
                 <h2 className='title'><span>Meal</span>DB</h2>
 
-                <nav>
+                <nav className='nav'>
                     <li>Home</li>
                     <li>About</li>
                     <li>Selected</li>
